@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cash Register</title>
+</head>
+<body>
+    <figure>
+        <img class="freeCodeCamp-logo-image" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freecodecamp logo">
+    </figure>
+    <main class="app-container">
+        <h1 class="app-title">Cash Register Project</h1>
+        <div id="change-due" class="change-due">
+        </div>
+        <form action="" class="customer-controls-container">
+            <label for="cash">Enter cash from customer: </label>
+            <input type="number" name="cash-from-customer" id="cash">
+            <button type="button" class="btn" id="purchase-btn">Purchase</button>
+        </form>
+        <div class="total-amount-item">
+            <p>Total: $<span id="price">3.26</span></p>
+        </div>
+        <div class="drawer-drawing">
+            <div class="drawer-drawing-buttons-container">
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+                <div class="drawer-drawing-button"></div>
+            </div>
+            <div class="drawer-drawing-content">
+                <p><strong>Change in drawer:</strong></p>
+                <ul>
+                    <li>Pennies: $<span id="pennies">1.01</span></li>
+                    <li>Nickels: $<span id="nickels">2.05</span></li>
+                    <li>Dimes: $<span id="dimes">3.1</span></li>
+                    <li>Quarters: $<span id="quarters">4.25</span></li>
+                    <li>Ones: $<span id="ones">90</span></li>
+                    <li>Fives: $<span id="fives">55</span></li>
+                    <li>Tens: $<span id="tens">20</span></li>
+                    <li>Twenties: $<span id="twenties">60</span></li>
+                    <li>Hundreds: $<span id="hundreds">100</span></li>
+                </ul>
+            </div>
+            <div class="drawer-drawing-mini-circle"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
