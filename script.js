@@ -12,7 +12,6 @@ const tensViewport = document.getElementById("tens");
 const twentiesViewport = document.getElementById("twenties");
 const hundredsViewport = document.getElementById("hundreds");
 
-let cash;
 let cid = [
   ["PENNY", 1.01],
   ["NICKEL", 2.05],
@@ -24,6 +23,7 @@ let cid = [
   ["TWENTY", 60],
   ["ONE HUNDRED", 100]
 ];
+
 
 
 const InvalidCashInput = (input) => {
@@ -73,7 +73,7 @@ const calculateChange = (change, cid) => {
       
         while (change >= coinValue && currencyAmount > 0) {
           change -= coinValue;
-          change = Math.round(change * 100) / 100;
+          change = parseFloat(change.toFixed(2));
           currencyAmount -= coinValue;
           amountUsed += coinValue;
           cid[i][1] -= coinValue;
@@ -105,7 +105,7 @@ const checkCashRegister = (price, cash, cid) => {
 }
 
 purchaseBtn.addEventListener("click", () => {
-    cash = parseFloat(cashInput.value)
+    let cash = parseFloat(cashInput.value)
     if (InvalidCashInput(cash)){
         return;
     }
